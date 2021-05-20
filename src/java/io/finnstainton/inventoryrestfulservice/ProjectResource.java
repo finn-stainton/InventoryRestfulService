@@ -5,6 +5,7 @@
 package io.finnstainton.inventoryrestfulservice;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -64,6 +65,13 @@ public class ProjectResource {
         }
     }
     
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/bom")
+    public String getBOM(@QueryParam("id") @DefaultValue("-1") int projectID) {
+        return projectBean.getProject(projectID).jsonBOMString();
+    }
+    
     /**
      * Create Project from JSON input
      * @param json 
@@ -72,6 +80,7 @@ public class ProjectResource {
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
+//    @Path("/newproject")
     public Response addNewProject(String json) {
         try {
             JSONParser jsonParser = new JSONParser();
@@ -79,16 +88,9 @@ public class ProjectResource {
             JSONObject jsonObject = (JSONObject) jsonObj;
 
             String title = (String) jsonObject.get("title");
-            String schematicID = (String) jsonObject.get("schematicId");
-            int bomid = 1;
-//            (Integer) jsonObject.get("bomid");
+            String schematicID = (String) jsonObject.get("schematicID");
 
-            // TODO: Delete, LOG
-            System.out.println(title);
-            System.out.println(schematicID);
-            System.out.println(bomid);
-
-            Project project = projectBean.addNewProject(title, schematicID, bomid);
+            Project project = projectBean.addNewProject(title, schematicID);
             // Try retrieve project just created
             if(project != null) { // Success, return json of project
                 return Response.ok(project.jsonString()).build();

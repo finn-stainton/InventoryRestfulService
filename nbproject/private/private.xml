@@ -3,18 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/finn/OneDrive%20-%20AUT%20University/AUT%20OneDrive/COMP713_DM_systems/AssignmentThree/InventoryRestfulService/src/java/io/finnstainton/inventoryrestfulservice/Project.java</file>
-            <file>file:/Users/finn/OneDrive%20-%20AUT%20University/AUT%20OneDrive/COMP713_DM_systems/AssignmentThree/InventoryRestfulService/src/conf/persistence.xml</file>
-            <file>file:/Users/finn/OneDrive%20-%20AUT%20University/AUT%20OneDrive/COMP713_DM_systems/AssignmentThree/InventoryRestfulService/src/java/io/finnstainton/inventoryrestfulservice/BOMComponent.java</file>
-            <file>file:/Users/finn/OneDrive%20-%20AUT%20University/AUT%20OneDrive/COMP713_DM_systems/AssignmentThree/InventoryRestfulService/src/java/io/finnstainton/inventoryrestfulservice/BOMComponentDao.java</file>
-            <file>file:/Users/finn/OneDrive%20-%20AUT%20University/AUT%20OneDrive/COMP713_DM_systems/AssignmentThree/InventoryRestfulService/src/java/io/finnstainton/inventoryrestfulservice/ApplicationConfig.java</file>
-            <file>file:/Users/finn/OneDrive%20-%20AUT%20University/AUT%20OneDrive/COMP713_DM_systems/AssignmentThree/InventoryRestfulService/src/java/io/finnstainton/inventoryrestfulservice/ComponentDaoBean.java</file>
-            <file>file:/Users/finn/OneDrive%20-%20AUT%20University/AUT%20OneDrive/COMP713_DM_systems/AssignmentThree/InventoryRestfulService/src/java/io/finnstainton/inventoryrestfulservice/ProjectDao.java</file>
-            <file>file:/Users/finn/OneDrive%20-%20AUT%20University/AUT%20OneDrive/COMP713_DM_systems/AssignmentThree/InventoryRestfulService/src/java/io/finnstainton/inventoryrestfulservice/ProjectResource.java</file>
-            <file>file:/Users/finn/OneDrive%20-%20AUT%20University/AUT%20OneDrive/COMP713_DM_systems/AssignmentThree/InventoryRestfulService/src/conf/MANIFEST.MF</file>
-            <file>file:/Users/finn/OneDrive%20-%20AUT%20University/AUT%20OneDrive/COMP713_DM_systems/AssignmentThree/InventoryRestfulService/src/java/io/finnstainton/inventoryrestfulservice/Component.java</file>
-            <file>file:/Users/finn/OneDrive%20-%20AUT%20University/AUT%20OneDrive/COMP713_DM_systems/AssignmentThree/InventoryRestfulService/src/java/io/finnstainton/inventoryrestfulservice/ComponentDao.java</file>
-            <file>file:/Users/finn/OneDrive%20-%20AUT%20University/AUT%20OneDrive/COMP713_DM_systems/AssignmentThree/InventoryRestfulService/src/java/io/finnstainton/inventoryrestfulservice/ComponentResource.java</file>
+            <file>file:/Users/finn/Documents/GitHub/InventoryRestfulService/src/java/io/finnstainton/inventoryrestfulservice/Project.java</file>
+            <file>file:/Users/finn/Documents/GitHub/InventoryRestfulService/src/java/io/finnstainton/inventoryrestfulservice/Component.java</file>
+            <file>file:/Users/finn/Documents/GitHub/InventoryRestfulService/src/java/io/finnstainton/inventoryrestfulservice/ProjectResource.java</file>
+            <file>file:/Users/finn/Documents/GitHub/InventoryRestfulService/src/java/io/finnstainton/inventoryrestfulservice/ProjectDaoBean.java</file>
+            <file>file:/Users/finn/Documents/GitHub/InventoryRestfulService/src/java/io/finnstainton/inventoryrestfulservice/ComponentResource.java</file>
+            <file>file:/Users/finn/Documents/GitHub/InventoryRestfulService/src/java/io/finnstainton/inventoryrestfulservice/BOMComponentDaoBean.java</file>
+            <file>file:/Users/finn/Documents/GitHub/InventoryRestfulService/src/java/io/finnstainton/inventoryrestfulservice/ComponentDao.java</file>
+            <file>file:/Users/finn/Documents/GitHub/InventoryRestfulService/src/java/io/finnstainton/inventoryrestfulservice/BOMComponent.java</file>
+            <file>file:/Users/finn/Documents/GitHub/InventoryRestfulService/src/java/io/finnstainton/inventoryrestfulservice/BOMComponentResource.java</file>
+            <file>file:/Users/finn/Documents/GitHub/InventoryRestfulService/src/java/io/finnstainton/inventoryrestfulservice/ComponentDaoBean.java</file>
+            <file>file:/Users/finn/Documents/GitHub/InventoryRestfulService/src/java/io/finnstainton/inventoryrestfulservice/ProjectDao.java</file>
         </group>
     </open-files>
 </project-private>

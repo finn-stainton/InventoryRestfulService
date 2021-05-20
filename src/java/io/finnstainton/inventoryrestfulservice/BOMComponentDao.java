@@ -8,19 +8,23 @@ import javax.ejb.Remote;
 
 /**
  *
- * @author finn
+ * @author finnstainton (17982742)
  */
 @Remote
 public interface BOMComponentDao {
     //Create
-    public BOMComponent addNewBOMComponent(int bomId, int idComponent, Float qty, 
-            String refDes, String notes);
+    public BOMComponent addNewBOMComponent(Component component, Project project, 
+            Float qty, String refDes, String notes);
+    
     //Retrieve 
-    public BOMComponent getBOMComponent(int idComponent);
+    public BOMComponent getBOMComponent(int idBOMComponent);
+    
     //Retrieve component Id's from manuID search
     
+    
     //Update
-    public void updateBOMComponent(BOMComponent component);
+    public void updateBOMComponent(BOMComponent bomComponent);
+    
     //Delete
     public void removeBOMComponent(BOMComponent component);
 }

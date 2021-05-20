@@ -12,7 +12,7 @@ import java.util.Collection;
  */
 public interface ProjectDao {
     //Create
-    public Project addNewProject(String title, String schematicId, int bomid);
+    public Project addNewProject(String title, String schematicId);
     
     //Retrieve
     public Collection<Project> getAllProjects();

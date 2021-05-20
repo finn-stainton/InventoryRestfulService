@@ -26,12 +26,11 @@ public class ProjectDaoBean implements ProjectDao {
    private EntityManager entityManager;
 
     @Override
-    public Project addNewProject(String title, String schematicId, int bomid) {
+    public Project addNewProject(String title, String schematicId) {
         try {
             Project project = new Project();
             project.setTitle(title);
             project.setSchematicId(schematicId);
-            project.setBomid(bomid);
             entityManager.persist(project);
             return project;
         } catch(EntityExistsException e) {
@@ -48,7 +47,7 @@ public class ProjectDaoBean implements ProjectDao {
 
     @Override
     public Project getProject(int idProject) {
-        Project newProject= entityManager.find(Project.class, idProject);
+        Project newProject = entityManager.find(Project.class, idProject);
         return newProject;
     }
 

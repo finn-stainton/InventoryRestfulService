@@ -5,6 +5,7 @@
 package io.finnstainton.inventoryrestfulservice;
 
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,21 +17,24 @@ import javax.xml.bind.annotation.XmlRootElement;
  * Represents an electronic component, e.g. ATMEGA 328p
  * @author finnstainton (17982742)
  */
-@Entity
+@Entity(name = "Component")
 @Table(name = "mvc0044_Components")
 @XmlRootElement
 public class Component implements Serializable{
     private static final long serialVersionUID = 1L;
     private static String Q = "\"";
+    
     @Id
     @GeneratedValue
     private int idComponent;
     private String manuID;
     private String description;
+    private String val;
     private String binId;
     private String category;
     private String dataSheetId;
     private String manufacturer;
+    @Column(name = "package")
     private String packageName;
     private String type;
     private String qtyUnit;
@@ -66,6 +70,14 @@ public class Component implements Serializable{
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getVal() {
+        return val;
+    }
+
+    public void setVal(String val) {
+        this.val = val;
     }
 
     public String getBinId() {
@@ -151,19 +163,20 @@ public class Component implements Serializable{
     
     public String jsonString() {
         return '{' + 
-                Q + "idComponent" + "\": \" " + idComponent + "," + Q +
-                Q + "manuID" + "\": \" " + manuID + "," + Q +
-                Q + "description" + "\": \" " + description + "," + Q + 
-                Q + "binId=" + "\": \" " + binId + ", " + Q +
-                Q + "category=" + "\": \" " + category + ", " + Q +
-                Q + "dataSheetId=" + "\": \" " + dataSheetId + ", " + Q +
-                Q + "manufacturer=" + "\": \" " + manufacturer + ", " + Q +
-                Q + "packageName=" + "\": \" " + packageName + ", " + Q +
-                Q + "type=" + "\": \" " + type + ", " + Q +
-                Q + "qtyUnit=" + "\": \" " + qtyUnit + ", " + Q +
-                Q + "qty=" + "\": \" " + qty + ", " + Q +
-                Q + "restockLevel=" + "\": \" " + restockLevel + ", " + Q +
-                Q + "fav=" + "\": \" " + fav + Q + 
+                Q + "idComponent" + Q + ": " + Q + idComponent + Q + ", " +
+                Q + "manuID" + Q + ": " + Q + manuID + Q + ", " +
+                Q + "description" + Q + ": " + Q + description + Q + ", " + 
+                Q + "value" + Q + ": " + Q + val + Q + ", " + 
+                Q + "binId=" + Q + ": " + Q + binId + Q + ", " +
+                Q + "category=" + Q + ": " + Q + category + Q + ", " +
+                Q + "dataSheetId=" + Q + ": " + Q + dataSheetId + Q + ", " +
+                Q + "manufacturer=" + Q + ": " + Q + manufacturer + Q + ", " +
+                Q + "packageName=" + Q + ": " + Q + packageName + Q + ", " +
+                Q + "type=" + Q + ": " + Q + type + Q + ", " +
+                Q + "qtyUnit=" + Q + ": " + Q + qtyUnit + Q + ", " +
+                Q + "qty=" + Q + ": " + Q + qty + Q + ", " +
+                Q + "restockLevel=" + Q + ": " + Q + restockLevel + Q + ", " +
+                Q + "fav=" + Q + ": " + Q + fav + Q + 
                 '}';
     }
     

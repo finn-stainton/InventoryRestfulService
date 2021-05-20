@@ -21,45 +21,43 @@ import javax.persistence.PersistenceContext;
 //@WebService // TODO: Delete this after testing
 @Stateless
 @LocalBean
-public class BOMComponentDaoBean implements ProjectDao {
+public class BOMComponentDaoBean implements BOMComponentDao {
    @PersistenceContext
    private EntityManager entityManager;
 
     @Override
-    public Project addNewProject(String title, String schematicId, int bomid) {
-        try {
-            Project project = new Project();
-            project.setTitle(title);
-            project.setSchematicId(schematicId);
-            project.setBomid(bomid);
-            entityManager.persist(project);
-            return project;
+    public BOMComponent addNewBOMComponent(Component component, Project project, 
+            Float qty, String refDes, String notes) {
+        try{
+            BOMComponent bomComponent = new BOMComponent();
+            bomComponent.setQty(qty);
+            bomComponent.setRefDes(refDes);
+//            bomComponent.setComponent(component);
+            bomComponent.setProject(project);
+
+            entityManager.persist(bomComponent);
+            return bomComponent;
         } catch(EntityExistsException e) {
             return null;
         }
     }
-    
+
     @Override
-    public Collection<Project> getAllProjects() {
-        Collection<Project> projects = new ArrayList<Project>();
-        
-        return projects;
+    public BOMComponent getBOMComponent(int idBOMComponent) {
+        BOMComponent bomComponent = entityManager.find(BOMComponent.class, idBOMComponent);
+        return bomComponent;
     }
 
     @Override
-    public Project getProject(int idProject) {
-        Project newProject= entityManager.find(Project.class, idProject);
-        return newProject;
+    public void updateBOMComponent(BOMComponent bomComponent) {
+        entityManager.merge(bomComponent);
     }
 
     @Override
-    public void updateProject(Project project) {
-        entityManager.merge(project);
+    public void removeBOMComponent(BOMComponent component) {
+        entityManager.remove(component);
     }
 
-    @Override
-    public void removeProject(Project project) {
-        entityManager.remove(project);
-    }
+ 
 
 }

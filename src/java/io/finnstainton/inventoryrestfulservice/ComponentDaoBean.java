@@ -24,7 +24,7 @@ public class ComponentDaoBean implements ComponentDao {
    private EntityManager entityManager;
 
     @Override
-    public Component addNewComponent(String manuID, String description,
+    public Component addNewComponent(String manuID, String description, String value,
         String binId, String category, String dataSheetId, String manufacturer,
         String packageName, String type, String qtyUnit, Float qty, 
         Float restockLevel, boolean fav) {
@@ -32,6 +32,7 @@ public class ComponentDaoBean implements ComponentDao {
             Component component = new Component();
             component.setManuID(manuID);
             component.setDescription(description);
+            component.setVal(value);
             component.setBinId(binId);
             component.setCategory(category);
             component.setDataSheetId(dataSheetId);
@@ -56,12 +57,13 @@ public class ComponentDaoBean implements ComponentDao {
     }
 
     @Override
-    public void updateComponent(Component component) {
-        entityManager.merge(component);
+    public Component updateComponent(Component component) {
+        return entityManager.merge(component);
     }
 
     @Override
-    public void removeComponent(Component component) {
+    public Component removeComponent(Component component) {
         entityManager.remove(component);
+        return component;
     }
 }

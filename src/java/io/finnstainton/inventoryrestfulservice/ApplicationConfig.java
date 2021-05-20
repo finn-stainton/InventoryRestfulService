@@ -27,7 +27,8 @@ public class ApplicationConfig extends Application
     */
    private void addRestResourceClasses(Set<Class<?>> resources)
    {
-      resources.add(io.finnstainton.inventoryrestfulservice.ComponentResource.class);
+      resources.add(io.finnstainton.inventoryrestfulservice.BOMComponentResource.class);
+        resources.add(io.finnstainton.inventoryrestfulservice.ComponentResource.class);
         resources.add(io.finnstainton.inventoryrestfulservice.ProjectResource.class);
    } 
 }

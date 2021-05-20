@@ -13,7 +13,7 @@ import javax.ejb.Remote;
 @Remote
 public interface ComponentDao {
     //Create
-    public Component addNewComponent(String manuID, String description,
+    public Component addNewComponent(String manuID, String description, String value,
     String binId, String category, String dataSheetId, String manufacturer,
     String packageName, String type, String qtyUnit, Float qty, 
     Float restockLevel, boolean fav);
@@ -22,7 +22,7 @@ public interface ComponentDao {
     //Retrieve component Id's from manuID search
     
     //Update
-    public void updateComponent(Component component);
+    public Component updateComponent(Component component);
     //Delete
-    public void removeComponent(Component component);
+    public Component removeComponent(Component component);
 }
